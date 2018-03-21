@@ -1,10 +1,11 @@
-# W-site
-### Welcome to my repository
-This is my first repository about a website that I made. It is a portfolio of me.
+# Welcome to W-site
 
+This is a portfolio made with the goal of show everything of you and what are you good.
 
-This page is not already finished.
+## Made with
+
+This site is made with the basics of web develp `HTML5`, `CSS3`, `Javascript`
 
 ## License
 
-Licensed under [Mit License](LICENSE)
+Copyright (c) David Leonardo Ruiz Carreño. Licensed under [Mit License](LICENSE)
