@@ -15,5 +15,5 @@
     $headers .= "Reply-To: $Email_user\r\n";
 
     mail($to, $email_subject, $email_body, $headers);
-    header("Location: index.html");
+    // header("Location: index.html");
 ?>
