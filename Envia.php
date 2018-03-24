@@ -1,8 +1,8 @@
 <?php  
 
-    $Nombre = $_POST['Nombre'];
-    $Body = $_POST['Mensaje'];
-    $Correo = $_POST['Correo'];
+    $Nombre = $_POST['Name'];
+    $Body = $_POST['Message'];
+    $Correo = $_POST['Email'];
 
     require_once("class.phpmailer.php");
     $mail = new PHPMailer(); 
