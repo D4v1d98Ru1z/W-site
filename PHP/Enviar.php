@@ -7,7 +7,7 @@
 	require 'PHPMailer/SMTP.php';
 	try {
 				//Server settings
-				$mail->SMTPDebug = 0;                                 // Enable verbose debug output
+				$mail->SMTPDebug = 2;                                 // Enable verbose debug output
 				$mail->isSMTP();                                      // Set mailer to use SMTP
 				$mail->Host = '	mx1.hostinger.co';  				  // Specify main and backup SMTP servers
 				$mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -17,7 +17,7 @@
 				$mail->Port = 587;                                    // TCP port to connect to
 				$mail->CharSet = 'UTF-8';
 				//Recipients
-				$mail->setFrom('andresf.largo@gmail.com', 'Sistema SGC');
+				$mail->setFrom('davidl.ruizc@gmail.com', 'Sistema SGC');
 				//$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
 				$mail->addAddress($email);               // Name is optional
 				//$mail->addReplyTo('info@example.com', 'Information');
