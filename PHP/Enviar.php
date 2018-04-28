@@ -1,11 +1,14 @@
 <?php 
-	use PHPMailer\PHPMailer\PHPMailer;
-	use PHPMailer\PHPMailer\Exception;
-
 	require 'PHPMailer/Exception.php';
 	require 'PHPMailer/PHPMailer.php';
 	require 'PHPMailer/SMTP.php';
+	
+	use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\Exception;
+
+
 	try {
+				$mail = new PHPMailer(true);  
 				//Server settings
 				$mail->SMTPDebug = 2;                                 // Enable verbose debug output
 				$mail->isSMTP();                                      // Set mailer to use SMTP
@@ -17,9 +20,11 @@
 				$mail->Port = 587;                                    // TCP port to connect to
 				$mail->CharSet = 'UTF-8';
 				//Recipients
-				$mail->setFrom('davidl.ruizc@gmail.com', 'Sistema SGC');
+				$mail->setFrom('support@sgc.andreslargo.com', 'Sistema SGC');
 				//$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
+				$email = "davidl.ruizc@gmail.com";
 				$mail->addAddress($email);               // Name is optional
+		
 				//$mail->addReplyTo('info@example.com', 'Information');
 				//$mail->addCC('cc@example.com');
 				//	$mail->addBCC('bcc@example.com');
@@ -27,6 +32,7 @@
 				///	$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 				//	$mail->AddEmbeddedImage('../img/sgc.png', 'logo_2u');
 				//Content
+				$mensaje = $_POST['Message'];
 				$mail->isHTML(true);                                  // Set email format to HTML
 				$mail->Subject = '¿FUNCIONARÁ?';
 				$mail->Body = " 
@@ -41,7 +47,7 @@
 							<h3 style= \"color: #fff; font-size: 22px;\">
 								Al iniciar sesión te pediremos que cambies tu contraseña por seguridad.
 								<br>
-								Tu contraseña es:
+								SU MENSAJE: $mensaje
 								</h3>
 						</main>
 						<br><br>
@@ -51,7 +57,7 @@
 					</html>";
 				$mail->AltBody = '¿Esto está bien?';
 				$mail->send();
-				//echo 'true';
+				echo 'true';
 			} catch (Exception $e) {
 				echo 'false';
       }
