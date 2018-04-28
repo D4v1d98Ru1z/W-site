@@ -14,15 +14,15 @@
 				$mail->isSMTP();                                      // Set mailer to use SMTP
 				$mail->Host = '	mx1.hostinger.co';  				  // Specify main and backup SMTP servers
 				$mail->SMTPAuth = true;                               // Enable SMTP authentication
-				$mail->Username = 'support@sgc.andreslargo.com';                 // SMTP username
-				$mail->Password = 'nicky246';                           // SMTP password
+				$mail->Username = '---Email----';                 // SMTP username
+				$mail->Password = '-----Password------';                           // SMTP password
 				$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 				$mail->Port = 587;                                    // TCP port to connect to
 				$mail->CharSet = 'UTF-8';
 				//Recipients
 				$mail->setFrom('support@sgc.andreslargo.com', 'Sistema SGC');
 				//$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
-				$email = "davidl.ruizc@gmail.com";
+				$email = "---destination email-----";
 				$mail->addAddress($email);               // Name is optional
 		
 				//$mail->addReplyTo('info@example.com', 'Information');
