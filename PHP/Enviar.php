@@ -12,29 +12,31 @@
 				//Server settings
 				$mail->SMTPDebug = 2;                                 // Enable verbose debug output
 				$mail->isSMTP();                                      // Set mailer to use SMTP
-				$mail->Host = '	mx1.hostinger.co';
-				//$mail->Host = 'smtp.gmail.com';   				  // Specify main and backup SMTP servers
+				//$mail->Host = '	mx1.hostinger.co';
+				$mail->Host = 'smtp.gmail.com';   				  // Specify main and backup SMTP servers
 				$mail->SMTPAuth = true;                               // Enable SMTP authentication
-				$mail->Username = '---Email----';                 // SMTP username
-				$mail->Password = '---Password----';                           // SMTP password
+				$mail->Username = 'davidl.ruizc@gmail.com'; //---Email----                // SMTP username
+				$mail->Password = ''; //---Password----                          // SMTP password
 				
 				$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 				
 				$mail->Port = 587;                                    // TCP port to connect to
 				//Para envio por Gmail                              // TCP port to connect to				
-				// $mail->SMTPOptions = array(
-				// 	'ssl' => array(
-				// 		'verify_peer' => false,
-				// 		'verify_peer_name' => false,
-				// 		'allow_self_signed' => true
-				// 	)
-				// );
+				 $mail->SMTPOptions = array(
+				 	'ssl' => array(
+				 		'verify_peer' => false,
+				 		'verify_peer_name' => false,
+				 		'allow_self_signed' => true
+				 	)
+				 );
 				
 				$mail->CharSet = 'UTF-8';
 				//Recipients
-				$mail->setFrom('support@sgc.andreslargo.com', 'Portfolio Site');
+				//correo de servidor
+				//$mail->setFrom('support@sgc.andreslargo.com', 'Portfolio Site');
+				$mail->setFrom('davidl.ruizc@gmail.com', 'Portfolio Site');
 				//$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
-				$email = "----destination email-----";
+				$email = "davidl.ruizc@gmail.com";//----destination email-----
 				$mail->addAddress($email);               // Name is optional
 		
 				//$mail->addReplyTo('info@example.com', 'Information');
